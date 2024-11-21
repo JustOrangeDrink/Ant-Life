@@ -12,18 +12,18 @@ body {
   display: flex;
   background-color: black;
   border: 3px solid white;
-  width: 15%;
+  width: 13.6%;
   height: 99%;
-  margin-bottom: 0;
-  margin-left: 5px;
+  margin-right: 2px;
+  justify-content: center;
+  align-items: center;
 }
 
 .simulation {
   display: flex;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 100%;
   height: 100%;
-  margin: auto 0 auto 0;
   justify-content: center;
   align-content: center;
 }
@@ -41,12 +41,43 @@ body {
   display: flex;
   justify-content: space-between;
   height: 99vh;
-  width: 100%;
+  width: 100vw;
   /* border: 2px solid green; */
-  padding: 5px;
 }
 
 @font-face {
   font-family: PressStart2P;
   src: url(PressStart2P-Regular.ttf);
+}
+
+/* CSS FOR RANGE INPUTS (SLIDERS). FIREFOX IS -moz AND -webkit FOR EVERYTHING ELSE*/
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 15rem;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  background: red;
+  height: 0.2rem;
+}
+input[type="range"]::-moz-range-track {
+  background: white;
+  height: 0.2rem;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -12px; /* Centers thumb on the track */
+  background-color: white;
+  height: 0.7rem;
+  width: 0.7rem;
+}
+input[type="range"]::-moz-range-thumb {
+  border: 3px solid white; /*Removes extra border that FF applies */
+  border-radius: 0; /*Removes default border-radius that FF applies*/
+  background-color: black;
+  height: 0.6rem;
+  width: 0.6rem;
 }

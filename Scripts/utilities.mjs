@@ -6,4 +6,8 @@ function gridToWorld(gridValue) {
   return gridValue * 16;
 }
 
-export { worldToGrid, gridToWorld };
+function randomMinMax(min, max) {
+  return Math.floor(Math.random() * (max - min) + 1 + min);
+}
+
+export { worldToGrid, gridToWorld, randomMinMax };
